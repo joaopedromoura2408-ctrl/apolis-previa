@@ -1,0 +1,2407 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Apolis Clinic | Estética Avançada e Rejuvenescimento em Goiânia</title>
+  <meta name="description" content="Apolis Clinic por Dra. Polyanna Poloniato. Estética facial e corporal avançada, tecnologia e avaliação individualizada no Jardim Goiás, Goiânia - GO.">
+  <meta name="keywords" content="Apolis Clinic Goiânia, clínica de estética Goiânia, estética Jardim Goiás, harmonização facial Goiânia, rejuvenescimento facial Goiânia, Dra Polyanna Poloniato">
+  <meta name="author" content="Apolis Clinic">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph / Meta Social -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Apolis Clinic • Estética Facial e Corporal Avançada">
+  <meta property="og:description" content="Realce o que faz você ser você. Procedimentos com tecnologia, precisão e respeito à sua identidade em Goiânia.">
+  <meta property="og:locale" content="pt_BR">
+
+  <!-- Tipografia Editorial & Contemporânea: Cormorant Garamond + Montserrat -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Schema.org Local Business / Medical Clinic -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MedicalBusiness",
+    "name": "Apolis Clinic",
+    "image": "Logo_2.png",
+    "telephone": "+5562981990396",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Rua 61, nº 195",
+      "addressLocality": "Goiânia",
+      "addressRegion": "GO",
+      "postalCode": "74810-280",
+      "addressCountry": "BR"
+    },
+    "founder": {
+      "@type": "Person",
+      "name": "Dra. Polyanna Poloniato",
+      "jobTitle": "Farmacêutica Esteta e Fonoaudióloga"
+    }
+  }
+  </script>
+
+  <style>
+    /* ==========================================================================
+       DESIGN SYSTEM & CSS VARIABLES
+       ========================================================================== */
+    :root {
+      --bg-main: #FAF7F0;         /* Creme claro acetinado */
+      --bg-champagne: #F5EFE5;    /* Off-white quente */
+      --bg-card: #FFFFFF;         /* Branco puro para contraste sutil */
+      --bg-subtle: #EFE7DA;       /* Bege suave */
+      --accent-gold: #B9975B;     /* Dourado autoral da Apolis */
+      --accent-gold-light: #D6B979;
+      --accent-deep-green: #17483C;/* Verde profundo de contraste */
+      --text-dark: #1C1B19;       /* Preto suave / carvão */
+      --text-muted: #5D5146;      /* Taupe sofisticado */
+      --border-subtle: #E2D7C7;   /* Linha fina discreta */
+      
+      --font-serif: 'Cormorant Garamond', Georgia, serif;
+      --font-sans: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
+      
+      --shadow-subtle: 0 4px 20px rgba(93, 81, 70, 0.04);
+      --shadow-hover: 0 8px 30px rgba(93, 81, 70, 0.09);
+      --radius-sm: 6px;
+      --radius-md: 10px;
+      --radius-lg: 14px;
+      
+      --transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+      --max-w: 1200px;
+      --section-py-mobile: 4.5rem;
+      --section-py-desktop: 7.5rem;
+    }
+
+    /* ==========================================================================
+       RESET & BASE STYLES
+       ========================================================================== */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    body {
+      background-color: var(--bg-main);
+      color: var(--text-dark);
+      font-family: var(--font-sans);
+      font-weight: 400;
+      line-height: 1.65;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    button {
+      font-family: inherit;
+      cursor: pointer;
+      border: none;
+      background: none;
+    }
+
+    /* Container global */
+    .container {
+      width: 100%;
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+
+    /* Tipografia de Apoio */
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--accent-gold);
+      margin-bottom: 1.25rem;
+    }
+
+    .eyebrow::before, .eyebrow::after {
+      content: "";
+      width: 18px;
+      height: 1px;
+      background-color: var(--accent-gold);
+      display: inline-block;
+    }
+    .eyebrow-no-after::after {
+      display: none;
+    }
+
+    h1, h2, h3, h4 {
+      font-family: var(--font-serif);
+      font-weight: 500;
+      line-height: 1.18;
+      color: var(--text-dark);
+      letter-spacing: -0.01em;
+    }
+
+    h1 { font-size: clamp(2.35rem, 5vw, 3.8rem); }
+    h2 { font-size: clamp(2rem, 4vw, 3.1rem); }
+    h3 { font-size: clamp(1.4rem, 2.5vw, 1.85rem); }
+
+    p.lead {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      font-weight: 300;
+      line-height: 1.8;
+      max-width: 620px;
+    }
+
+    /* Botões Autorais */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.95rem 1.85rem;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      border-radius: var(--radius-sm);
+      transition: var(--transition);
+      text-align: center;
+      position: relative;
+    }
+
+    .btn-primary {
+      background-color: var(--accent-gold);
+      color: #FFFFFF;
+      box-shadow: 0 4px 15px rgba(185, 151, 91, 0.25);
+    }
+
+    .btn-primary:hover {
+      background-color: var(--accent-gold-light);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(185, 151, 91, 0.35);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--text-dark);
+      border: 1px solid var(--accent-gold);
+    }
+
+    .btn-secondary:hover {
+      background-color: var(--accent-gold);
+      color: #FFFFFF;
+      transform: translateY(-2px);
+    }
+
+    /* ==========================================================================
+       BOTÃO FIXO DE WHATSAPP (MANDATÓRIO)
+       ========================================================================== */
+    .fixed-whatsapp {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      z-index: 999;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background-color: #25D366;
+      color: #FFFFFF;
+      padding: 13px 20px;
+      border-radius: 50px;
+      box-shadow: 0 6px 25px rgba(37, 211, 102, 0.38);
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      transition: var(--transition);
+    }
+
+    .fixed-whatsapp:hover {
+      transform: translateY(-3px) scale(1.02);
+      box-shadow: 0 10px 30px rgba(37, 211, 102, 0.48);
+    }
+
+    .fixed-whatsapp svg {
+      width: 22px;
+      height: 22px;
+      fill: currentColor;
+    }
+
+    @media (max-width: 768px) {
+      .fixed-whatsapp span {
+        display: none;
+      }
+      .fixed-whatsapp {
+        padding: 14px;
+        bottom: 20px;
+        right: 20px;
+      }
+    }
+
+    /* ==========================================================================
+       HEADER STICKY & NAV
+       ========================================================================== */
+    .site-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: rgba(250, 247, 240, 0.94);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      z-index: 100;
+      transition: var(--transition);
+      border-bottom: 1px solid rgba(226, 215, 199, 0.5);
+    }
+
+    .site-header.scrolled {
+      background-color: #FAF7F0;
+      box-shadow: 0 4px 18px rgba(93, 81, 70, 0.06);
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 80px;
+    }
+
+    .brand-logo img {
+      height: 42px;
+      width: auto;
+    }
+
+    .nav-menu {
+      display: flex;
+      align-items: center;
+      gap: 2.2rem;
+      list-style: none;
+    }
+
+    .nav-link {
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--text-dark);
+      position: relative;
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0%;
+      height: 1px;
+      background-color: var(--accent-gold);
+      transition: var(--transition);
+    }
+
+    .nav-link:hover::after {
+      width: 100%;
+    }
+
+    .header-cta {
+      display: block;
+    }
+
+    /* Hamburger Mobile */
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      padding: 8px;
+    }
+
+    .menu-toggle span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background-color: var(--text-dark);
+      transition: var(--transition);
+    }
+
+    @media (max-width: 991px) {
+      .header-cta {
+        display: none;
+      }
+      .menu-toggle {
+        display: flex;
+      }
+      .nav-menu {
+        position: fixed;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background-color: #FAF7F0;
+        flex-direction: column;
+        gap: 1.8rem;
+        padding: 2.5rem 1.5rem;
+        border-bottom: 1px solid var(--border-subtle);
+        transform: translateY(-150%);
+        transition: transform 0.4s ease;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+      }
+      .nav-menu.active {
+        transform: translateY(0);
+      }
+    }
+
+    /* ==========================================================================
+       HERO SECTION
+       ========================================================================== */
+    .hero-section {
+      padding-top: calc(80px + 3rem);
+      padding-bottom: 4rem;
+      position: relative;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+      align-items: center;
+    }
+
+    .hero-content {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .hero-content h1 {
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-content .lead {
+      margin-bottom: 2.2rem;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .hero-image-wrapper {
+      position: relative;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      aspect-ratio: 4/5;
+      background-color: var(--bg-champagne);
+      box-shadow: var(--shadow-subtle);
+    }
+
+    .hero-image-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .hero-badge {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      right: 20px;
+      background: rgba(250, 247, 240, 0.94);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(226, 215, 199, 0.8);
+      padding: 1.1rem 1.4rem;
+      border-radius: var(--radius-sm);
+    }
+
+    .hero-badge p {
+      font-family: var(--font-serif);
+      font-size: 1.15rem;
+      font-style: italic;
+      color: var(--text-dark);
+      line-height: 1.35;
+    }
+
+    .hero-badge span {
+      display: block;
+      font-family: var(--font-sans);
+      font-style: normal;
+      font-size: 0.65rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent-gold);
+      margin-top: 5px;
+      font-weight: 600;
+    }
+
+    @media (min-width: 992px) {
+      .hero-section {
+        padding-top: calc(80px + 5rem);
+        padding-bottom: 6rem;
+      }
+      .hero-grid {
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: 4.5rem;
+      }
+      .hero-badge {
+        bottom: 30px;
+        left: 30px;
+        right: auto;
+        max-width: 320px;
+      }
+    }
+
+    /* ==========================================================================
+       SECTION: POSICIONAMENTO
+       ========================================================================== */
+    .positioning-section {
+      background-color: var(--bg-champagne);
+      padding: var(--section-py-mobile) 0;
+      border-top: 1px solid var(--border-subtle);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .positioning-inner {
+      max-width: 820px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .positioning-inner h2 {
+      margin-bottom: 1.8rem;
+    }
+
+    .positioning-text {
+      font-size: 1.15rem;
+      line-height: 1.9;
+      color: var(--text-muted);
+      font-weight: 300;
+    }
+
+    .positioning-text strong {
+      color: var(--text-dark);
+      font-weight: 500;
+    }
+
+    .decorative-symbol {
+      width: 36px;
+      height: 36px;
+      margin: 2rem auto 0 auto;
+      color: var(--accent-gold);
+      opacity: 0.8;
+    }
+
+    @media (min-width: 992px) {
+      .positioning-section {
+        padding: var(--section-py-desktop) 0;
+      }
+    }
+
+    /* ==========================================================================
+       SECTION: TRATAMENTOS (COM CARROSSEL NO MOBILE)
+       ========================================================================== */
+    .treatments-section {
+      padding: var(--section-py-mobile) 0;
+    }
+
+    .section-header {
+      margin-bottom: 3.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .section-header.center {
+      align-items: center;
+      text-align: center;
+    }
+
+    .treatment-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.8rem;
+    }
+
+    .treatment-card {
+      background: var(--bg-card);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      border: 1px solid var(--border-subtle);
+      box-shadow: var(--shadow-subtle);
+      transition: var(--transition);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .treatment-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-hover);
+      border-color: var(--accent-gold);
+    }
+
+    .treatment-thumb {
+      aspect-ratio: 16/10;
+      position: relative;
+      overflow: hidden;
+      background-color: var(--bg-subtle);
+    }
+
+    .treatment-thumb img {
+      width: 100%;
+      height: 100%;
+      transition: transform 0.6s ease;
+    }
+
+    .treatment-card:hover .treatment-thumb img {
+      transform: scale(1.05);
+    }
+
+    .treatment-body {
+      padding: 1.8rem;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .treatment-tag {
+      font-size: 0.65rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent-gold);
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .treatment-body h3 {
+      font-size: 1.45rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .treatment-body p {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+      font-weight: 300;
+      line-height: 1.6;
+      flex-grow: 1;
+    }
+
+    .treatment-action {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--accent-gold);
+      transition: var(--transition);
+    }
+
+    .treatment-card:hover .treatment-action {
+      color: var(--text-dark);
+      transform: translateX(4px);
+    }
+
+    /* Carrossel mobile para Tratamentos e Resultados */
+    @media (max-width: 1023px) {
+      .mobile-carousel {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        gap: 1rem;
+        padding-bottom: 1.5rem;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+      }
+      .mobile-carousel::-webkit-scrollbar {
+        display: none;
+      }
+      .mobile-carousel > * {
+        flex: 0 0 82%;
+        scroll-snap-align: start;
+      }
+    }
+
+    @media (min-width: 768px) and (max-width: 1023px) {
+      .mobile-carousel > * {
+        flex: 0 0 45%;
+      }
+    }
+
+    @media (min-width: 768px) and (max-width: 1023px) {
+      .treatment-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .treatment-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      .treatments-section {
+        padding: var(--section-py-desktop) 0;
+      }
+    }
+
+    /* ==========================================================================
+       SECTION: CONSULTA AVALIATIVA
+       ========================================================================== */
+    .evaluation-section {
+      background-color: var(--bg-champagne);
+      padding: var(--section-py-mobile) 0;
+      position: relative;
+    }
+
+    .evaluation-box {
+      background-color: #FFFFFF;
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: 1fr;
+      box-shadow: var(--shadow-subtle);
+    }
+
+    .evaluation-content {
+      padding: 2.5rem 1.8rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .evaluation-content h2 {
+      margin-bottom: 1.5rem;
+    }
+
+    .evaluation-content p {
+      font-size: 1rem;
+      color: var(--text-muted);
+      line-height: 1.8;
+      margin-bottom: 1.5rem;
+      font-weight: 300;
+    }
+
+    .evaluation-features {
+      list-style: none;
+      margin-bottom: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.85rem;
+    }
+
+    .evaluation-features li {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 0.92rem;
+      color: var(--text-dark);
+      font-weight: 500;
+    }
+
+    .evaluation-features li svg {
+      width: 16px;
+      height: 16px;
+      color: var(--accent-gold);
+      flex-shrink: 0;
+    }
+
+    .evaluation-image {
+      aspect-ratio: 4/3;
+      background-color: var(--bg-subtle);
+    }
+
+    .evaluation-image img {
+      width: 100%;
+      height: 100%;
+    }
+
+    @media (min-width: 992px) {
+      .evaluation-section {
+        padding: var(--section-py-desktop) 0;
+      }
+      .evaluation-box {
+        grid-template-columns: 1.1fr 0.9fr;
+      }
+      .evaluation-content {
+        padding: 4.5rem;
+      }
+      .evaluation-image {
+        aspect-ratio: auto;
+      }
+    }
+
+    /* ==========================================================================
+       SECTION: RESULTADOS REAIS (COM CARROSSEL NO MOBILE)
+       ========================================================================== */
+    .results-section {
+      padding: var(--section-py-mobile) 0;
+    }
+
+    .results-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.8rem;
+      margin-bottom: 2rem;
+    }
+
+    .result-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      box-shadow: var(--shadow-subtle);
+    }
+
+    .result-media {
+      aspect-ratio: 16/11;
+      background-color: var(--bg-subtle);
+      position: relative;
+    }
+
+    .result-media img {
+      width: 100%;
+      height: 100%;
+    }
+
+    .result-info {
+      padding: 1.4rem;
+    }
+
+    .result-badge {
+      font-size: 0.65rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--accent-gold);
+      font-weight: 600;
+    }
+
+    .result-info h4 {
+      font-size: 1.2rem;
+      margin: 0.35rem 0 0.5rem 0;
+    }
+
+    .result-info p {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    .results-disclaimer {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      text-align: center;
+      max-width: 750px;
+      margin: 0 auto;
+      font-style: italic;
+      opacity: 0.85;
+    }
+
+    @media (min-width: 768px) {
+      .results-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      .results-section {
+        padding: var(--section-py-desktop) 0;
+      }
+    }
+
+    /* ==========================================================================
+       SECTION: DRA. POLYANNA POLONIATO
+       ========================================================================== */
+    .authority-section {
+      background-color: var(--bg-champagne);
+      padding: var(--section-py-mobile) 0;
+      border-top: 1px solid var(--border-subtle);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .authority-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+      align-items: center;
+    }
+
+    .authority-image-container {
+      position: relative;
+    }
+
+    .authority-image {
+      aspect-ratio: 4/5;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-subtle);
+      border: 1px solid var(--border-subtle);
+    }
+
+    .authority-image img {
+      width: 100%;
+      height: 100%;
+    }
+
+    .authority-content h2 {
+      margin-bottom: 1.5rem;
+    }
+
+    .doctor-title {
+      font-size: 1.15rem;
+      font-weight: 500;
+      color: var(--accent-gold);
+      margin-bottom: 0.5rem;
+    }
+
+    .doctor-credentials {
+      font-size: 0.8rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 1.8rem;
+      font-weight: 500;
+    }
+
+    .authority-content p {
+      font-size: 1rem;
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+      line-height: 1.85;
+      font-weight: 300;
+    }
+
+    .authority-content p strong {
+      color: var(--text-dark);
+      font-weight: 500;
+    }
+
+    .signature-wrap {
+      margin-top: 2rem;
+      display: flex;
+      align-items: center;
+      gap: 1.2rem;
+    }
+
+    .signature-line {
+      width: 40px;
+      height: 1px;
+      background-color: var(--accent-gold);
+    }
+
+    .signature-text {
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-size: 1.2rem;
+      color: var(--text-dark);
+    }
+
+    @media (min-width: 992px) {
+      .authority-section {
+        padding: var(--section-py-desktop) 0;
+      }
+      .authority-grid {
+        grid-template-columns: 0.9fr 1.1fr;
+        gap: 5rem;
+      }
+    }
+
+    /* ==========================================================================
+       SECTION: TIMELINE / HISTÓRIA DA MARCA
+       ========================================================================== */
+    .timeline-section {
+      padding: var(--section-py-mobile) 0;
+    }
+
+    .timeline-wrapper {
+      max-width: 900px;
+      margin: 3.5rem auto 0 auto;
+      position: relative;
+    }
+
+    .timeline-wrapper::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 20px;
+      width: 1px;
+      background: var(--border-subtle);
+    }
+
+    .timeline-item {
+      position: relative;
+      padding-left: 55px;
+      margin-bottom: 3.5rem;
+    }
+
+    .timeline-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .timeline-dot {
+      position: absolute;
+      left: 14px;
+      top: 4px;
+      width: 13px;
+      height: 13px;
+      border-radius: 50%;
+      background: var(--bg-main);
+      border: 2px solid var(--accent-gold);
+    }
+
+    .timeline-year {
+      font-family: var(--font-serif);
+      font-size: 1.8rem;
+      color: var(--accent-gold);
+      line-height: 1;
+      margin-bottom: 0.35rem;
+      font-weight: 500;
+    }
+
+    .timeline-tag {
+      font-size: 0.68rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .timeline-item h4 {
+      font-size: 1.4rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .timeline-item p {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      font-weight: 300;
+      line-height: 1.65;
+    }
+
+    .timeline-conclusion {
+      text-align: center;
+      margin-top: 4.5rem;
+      font-family: var(--font-serif);
+      font-size: 1.5rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--accent-gold);
+    }
+
+    @media (min-width: 768px) {
+      .timeline-section {
+        padding: var(--section-py-desktop) 0;
+      }
+      .timeline-wrapper::before {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      .timeline-item {
+        width: 50%;
+        padding-left: 0;
+        margin-bottom: 4rem;
+      }
+      .timeline-item.left {
+        padding-right: 50px;
+        text-align: right;
+      }
+      .timeline-item.right {
+        margin-left: 50%;
+        padding-left: 50px;
+      }
+      .timeline-item.left .timeline-dot {
+        left: auto;
+        right: -7px;
+      }
+      .timeline-item.right .timeline-dot {
+        left: -7px;
+      }
+    }
+
+    /* ==========================================================================
+       SECTION: TECNOLOGIA A FAVOR DO CUIDADO
+       ========================================================================== */
+    .technology-section {
+      background-color: var(--bg-champagne);
+      padding: var(--section-py-mobile) 0;
+      border-top: 1px solid var(--border-subtle);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .tech-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 3rem;
+      align-items: center;
+    }
+
+    .tech-content h2 {
+      margin-bottom: 1.5rem;
+    }
+
+    .tech-content p {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      line-height: 1.8;
+      margin-bottom: 2rem;
+      font-weight: 300;
+    }
+
+    .tech-pillars {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    .tech-pillar {
+      background: #FFFFFF;
+      padding: 1.5rem;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border-subtle);
+    }
+
+    .tech-pillar h4 {
+      font-size: 1.15rem;
+      margin-bottom: 0.35rem;
+      color: var(--text-dark);
+    }
+
+    .tech-pillar p {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      margin-bottom: 0;
+    }
+
+    .tech-image {
+      aspect-ratio: 4/3;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-subtle);
+    }
+
+    .tech-image img {
+      width: 100%;
+      height: 100%;
+    }
+
+    @media (min-width: 992px) {
+      .technology-section {
+        padding: var(--section-py-desktop) 0;
+      }
+      .tech-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 4.5rem;
+      }
+    }
+
+    /* ==========================================================================
+       SECTION: EXPERIÊNCIA DO PACIENTE (4 PASSOS)
+       ========================================================================== */
+    .journey-section {
+      padding: var(--section-py-mobile) 0;
+    }
+
+    .steps-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    .step-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 2.2rem 1.8rem;
+      position: relative;
+      transition: var(--transition);
+    }
+
+    .step-card:hover {
+      border-color: var(--accent-gold);
+      transform: translateY(-3px);
+    }
+
+    .step-num {
+      font-family: var(--font-serif);
+      font-size: 2.8rem;
+      color: var(--accent-gold);
+      line-height: 1;
+      margin-bottom: 1.2rem;
+      font-weight: 500;
+    }
+
+    .step-card h4 {
+      font-size: 1.25rem;
+      margin-bottom: 0.75rem;
+      letter-spacing: 0.02em;
+    }
+
+    .step-card p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+      font-weight: 300;
+    }
+
+    @media (min-width: 768px) {
+      .steps-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .steps-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+      .journey-section {
+        padding: var(--section-py-desktop) 0;
+      }
+    }
+
+    /* ==========================================================================
+       SECTION: MENTORIA VIP
+       ========================================================================== */
+    .mentorship-section {
+      background-color: var(--text-dark);
+      color: #FAF7F0;
+      padding: var(--section-py-mobile) 0;
+      position: relative;
+    }
+
+    .mentorship-content {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .mentorship-content .eyebrow {
+      color: var(--accent-gold-light);
+    }
+
+    .mentorship-content h2 {
+      color: #FFFFFF;
+      margin-bottom: 1.5rem;
+    }
+
+    .mentorship-content p {
+      font-size: 1.05rem;
+      color: #D6D0C5;
+      font-weight: 300;
+      line-height: 1.85;
+      margin-bottom: 2.5rem;
+    }
+
+    @media (min-width: 992px) {
+      .mentorship-section {
+        padding: var(--section-py-desktop) 0;
+      }
+    }
+
+    /* ==========================================================================
+       SECTION: DEPOIMENTOS
+       ========================================================================== */
+    .testimonials-section {
+      padding: var(--section-py-mobile) 0;
+      background-color: var(--bg-main);
+    }
+
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.8rem;
+    }
+
+    .testimonial-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 2.2rem 1.8rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: var(--shadow-subtle);
+    }
+
+    .testimonial-quote {
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-size: 1.15rem;
+      color: var(--text-dark);
+      line-height: 1.65;
+      margin-bottom: 1.5rem;
+    }
+
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      border-top: 1px solid rgba(226, 215, 199, 0.6);
+      padding-top: 1.2rem;
+    }
+
+    .author-initial {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--bg-subtle);
+      color: var(--accent-gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 600;
+      font-size: 0.85rem;
+    }
+
+    .author-meta strong {
+      display: block;
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--text-dark);
+    }
+
+    .author-meta span {
+      display: block;
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      letter-spacing: 0.05em;
+    }
+
+    @media (min-width: 768px) {
+      .testimonials-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      .testimonials-section {
+        padding: var(--section-py-desktop) 0;
+      }
+    }
+
+    /* ==========================================================================
+       SECTION: LOCALIZAÇÃO
+       ========================================================================== */
+    .location-section {
+      padding: var(--section-py-mobile) 0;
+    }
+
+    .location-box {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: 1fr;
+      box-shadow: var(--shadow-subtle);
+    }
+
+    .location-info {
+      padding: 2.5rem 1.8rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .location-info h2 {
+      margin-bottom: 1.2rem;
+    }
+
+    .address-details {
+      margin-bottom: 2rem;
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+
+    .address-details strong {
+      color: var(--text-dark);
+    }
+
+    .location-map-wrap {
+      min-height: 300px;
+      background-color: var(--bg-subtle);
+      position: relative;
+    }
+
+    .location-map-wrap iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+      min-height: 350px;
+    }
+
+    @media (min-width: 992px) {
+      .location-box {
+        grid-template-columns: 1fr 1fr;
+      }
+      .location-info {
+        padding: 4.5rem;
+      }
+      .location-section {
+        padding: var(--section-py-desktop) 0;
+      }
+    }
+
+    /* ==========================================================================
+       SECTION: FAQ
+       ========================================================================== */
+    .faq-section {
+      padding: var(--section-py-mobile) 0;
+      background-color: var(--bg-champagne);
+      border-top: 1px solid var(--border-subtle);
+    }
+
+    .faq-wrapper {
+      max-width: 820px;
+      margin: 0 auto;
+    }
+
+    .accordion-item {
+      background: #FFFFFF;
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-sm);
+      margin-bottom: 1rem;
+      overflow: hidden;
+      transition: var(--transition);
+    }
+
+    .accordion-header {
+      width: 100%;
+      text-align: left;
+      padding: 1.4rem 1.6rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      font-family: var(--font-sans);
+      font-size: 0.98rem;
+      font-weight: 500;
+      color: var(--text-dark);
+      background: transparent;
+    }
+
+    .accordion-icon {
+      width: 16px;
+      height: 16px;
+      flex-shrink: 0;
+      color: var(--accent-gold);
+      transition: transform 0.3s ease;
+    }
+
+    .accordion-body {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s cubic-bezier(0.25, 1, 0.5, 1);
+      background-color: #FFFFFF;
+    }
+
+    .accordion-content {
+      padding: 0 1.6rem 1.4rem 1.6rem;
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+      font-weight: 300;
+    }
+
+    .accordion-item.active .accordion-icon {
+      transform: rotate(180deg);
+    }
+
+    @media (min-width: 992px) {
+      .faq-section {
+        padding: var(--section-py-desktop) 0;
+      }
+    }
+
+    /* ==========================================================================
+       SECTION: CTA FINAL
+       ========================================================================== */
+    .final-cta-section {
+      padding: var(--section-py-mobile) 0;
+      text-align: center;
+      background: linear-gradient(180deg, var(--bg-main) 0%, var(--bg-champagne) 100%);
+    }
+
+    .final-cta-inner {
+      max-width: 780px;
+      margin: 0 auto;
+    }
+
+    .final-cta-inner h2 {
+      margin-bottom: 1.4rem;
+    }
+
+    .final-cta-inner .lead {
+      margin: 0 auto 2.5rem auto;
+    }
+
+    .cta-button-group {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    @media (min-width: 992px) {
+      .final-cta-section {
+        padding: var(--section-py-desktop) 0;
+      }
+    }
+
+    /* ==========================================================================
+       FOOTER
+       ========================================================================== */
+    .site-footer {
+      background-color: var(--text-dark);
+      color: #FAF7F0;
+      padding: 4.5rem 0 2rem 0;
+      border-top: 1px solid #332f2b;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 3rem;
+      margin-bottom: 4rem;
+    }
+
+    .footer-brand img {
+      height: 40px;
+      width: auto;
+      margin-bottom: 1.2rem;
+    }
+
+    .footer-brand p {
+      font-size: 0.88rem;
+      color: #ABA49C;
+      line-height: 1.7;
+      max-width: 320px;
+    }
+
+    .footer-nav h5, .footer-contact h5 {
+      font-family: var(--font-sans);
+      font-size: 0.72rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--accent-gold-light);
+      margin-bottom: 1.4rem;
+    }
+
+    .footer-links {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .footer-links a {
+      font-size: 0.85rem;
+      color: #D6D0C5;
+      transition: var(--transition);
+    }
+
+    .footer-links a:hover {
+      color: #FFFFFF;
+      padding-left: 4px;
+    }
+
+    .footer-contact p {
+      font-size: 0.85rem;
+      color: #D6D0C5;
+      line-height: 1.7;
+      margin-bottom: 1rem;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid #2D2824;
+      padding-top: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      font-size: 0.75rem;
+      color: #8C847C;
+      text-align: center;
+    }
+
+    @media (min-width: 768px) {
+      .footer-grid {
+        grid-template-columns: 2fr 1fr 1.5fr;
+      }
+      .footer-bottom {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==========================================================================
+       WHATSAPP FIXO NO CANTO INFERIOR DIREITO
+       ========================================================================== -->
+  <a href="https://wa.me/5562981990396?text=Ol%C3%A1%2C%20gostaria%20de%20conversar%20sobre%20uma%20avalia%C3%A7%C3%A3o%20na%20Apolis%20Clinic." 
+     class="fixed-whatsapp" 
+     target="_blank" 
+     rel="noopener noreferrer" 
+     aria-label="Agendar pelo WhatsApp">
+    <svg viewBox="0 0 24 24">
+      <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766 0-3.18-2.587-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.312.045-.694.079-2.127-.518-1.503-.625-2.435-2.164-2.509-2.264-.074-.099-.607-.808-.607-1.543s.385-1.096.522-1.246c.137-.149.301-.186.402-.186.102 0 .204.002.293.007.094.005.22-.036.345.263.128.307.438 1.066.476 1.144.038.078.064.168.013.268-.052.1-.077.163-.153.251-.077.089-.161.198-.231.266-.078.075-.159.157-.068.313.091.156.403.666.865 1.077.595.53 1.097.694 1.253.772.156.078.247.068.339-.038.092-.105.394-.459.499-.617.106-.157.211-.131.353-.078.143.052.903.426 1.058.504.156.078.26.117.299.183.039.066.039.384-.105.789zM12 2C6.477 2 2 6.477 2 12c0 1.891.528 3.659 1.444 5.174L2 22l4.98-1.306C8.423 21.536 10.155 22 12 22c5.523 0 10-6.477 10-12S17.523 2 12 2z"/>
+    </svg>
+    <span>Agendar no WhatsApp</span>
+  </a>
+
+  <!-- ==========================================================================
+       HEADER INSTITUCIONAL
+       ========================================================================== -->
+  <header class="site-header" id="header">
+    <div class="container header-inner">
+      <a href="#inicio" class="brand-logo" aria-label="Apolis Clinic Página Inicial">
+        <img src="Logo_2.png" alt="Apolis Clinic Logo">
+      </a>
+
+      <nav aria-label="Navegação Principal">
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="#inicio" class="nav-link">Início</a></li>
+          <li><a href="#sobre" class="nav-link">Sobre</a></li>
+          <li><a href="#tratamentos" class="nav-link">Tratamentos</a></li>
+          <li><a href="#avaliacao" class="nav-link">Avaliação</a></li>
+          <li><a href="#resultados" class="nav-link">Resultados</a></li>
+          <li><a href="#dra-polyanna" class="nav-link">Dra. Polyanna</a></li>
+          <li><a href="#localizacao" class="nav-link">Localização</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-cta">
+        <a href="#avaliacao" class="btn btn-primary">Agendar Avaliação</a>
+      </div>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       1. HERO
+       ========================================================================== -->
+  <section class="hero-section" id="inicio">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <span class="eyebrow eyebrow-no-after">Apolis Clinic • Estética Avançada</span>
+        <h1>Realce o que faz você ser você.</h1>
+        <p class="lead">
+          Estética facial e corporal avançada, com avaliação individual, tecnologia e um olhar cuidadoso para resultados que respeitam a sua identidade.
+        </p>
+        <div class="hero-actions">
+          <a href="#avaliacao" class="btn btn-primary">Agendar Avaliação</a>
+          <a href="#sobre" class="btn btn-secondary">Conhecer a Apolis</a>
+        </div>
+      </div>
+
+      <div class="hero-image-wrapper">
+        <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=1000&q=80" 
+             alt="Cuidado com a pele e estética natural na Apolis Clinic em Goiânia" 
+             width="800" 
+             height="1000"
+             loading="eager">
+        <div class="hero-badge">
+          <p>"Rejuvenescer não é mudar quem você é."</p>
+          <span>Apolis Clinic Concept</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       2. BLOCO DE POSICIONAMENTO
+       ========================================================================== -->
+  <section class="positioning-section" id="sobre">
+    <div class="container">
+      <div class="positioning-inner">
+        <span class="eyebrow">Nosso Posicionamento</span>
+        <h2>Sua beleza. Seu momento. Seu plano.</h2>
+        <p class="positioning-text">
+          Na <strong>Apolis Clinic</strong>, acreditamos que estética não precisa significar transformação radical.<br><br>
+          Nosso trabalho parte de uma <strong>avaliação individual</strong> para entender suas características, objetivos e possibilidades. A partir disso, buscamos construir uma abordagem que valorize sua beleza e respeite aquilo que faz você ser você.
+        </p>
+        <div class="decorative-symbol" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <circle cx="12" cy="12" r="9"/>
+            <path d="M12 3v18M3 12h18"/>
+            <circle cx="12" cy="12" r="3"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       3. TRATAMENTOS (COM CARROSSEL NO MOBILE)
+       ========================================================================== -->
+  <section class="treatments-section" id="tratamentos">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow eyebrow-no-after">Procedimentos e Tecnologias</span>
+        <h2>Cuidados pensados para você</h2>
+        <p class="lead">Planos de tratamento fundamentados em indicação clínica precisa e naturalidade. (Arraste para o lado no celular)</p>
+      </div>
+
+      <div class="treatment-grid mobile-carousel">
+        <!-- Facial -->
+        <article class="treatment-card">
+          <div class="treatment-thumb">
+            <img src="Procedimentos e tecnologias, estética facial_2.png" 
+                 alt="Estética e Harmonização Facial" 
+                 loading="lazy">
+          </div>
+          <div class="treatment-body">
+            <span class="treatment-tag">Harmonia & Contorno</span>
+            <h3>Estética Facial</h3>
+            <p>Harmonização, rejuvenescimento e tratamentos faciais focados em suavidade e equilíbrio das linhas do rosto.</p>
+            <a href="https://wa.me/5562981990396?text=Gostaria%20de%20saber%20mais%20sobre%20tratamentos%20faciais." class="treatment-action" target="_blank" rel="noopener">
+              Saiba Mais <span>→</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- Corporal -->
+        <article class="treatment-card">
+          <div class="treatment-thumb">
+            <img src="https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&fit=crop&w=700&q=80" 
+                 alt="Protocolos de Estética Corporal" 
+                 loading="lazy">
+          </div>
+          <div class="treatment-body">
+            <span class="treatment-tag">Forma & Firmeza</span>
+            <h3>Estética Corporal</h3>
+            <p>Protocolos voltados aos cuidados corporais, estímulo de colágeno e bem-estar físico individualizado.</p>
+            <a href="https://wa.me/5562981990396?text=Gostaria%20de%20saber%20mais%20sobre%20tratamentos%20corporais." class="treatment-action" target="_blank" rel="noopener">
+              Saiba Mais <span>→</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- Tecnologia & Laser -->
+        <article class="treatment-card">
+          <div class="treatment-thumb">
+            <img src="Procedimentos e tecnologias, Tecnológia e laser_2.png" 
+                 alt="Laser e Tecnologias Avançadas" 
+                 loading="lazy">
+          </div>
+          <div class="treatment-body">
+            <span class="treatment-tag">Inovação Clínica</span>
+            <h3>Tecnologia e Laser</h3>
+            <p>Tecnologias estéticas aplicadas conforme avaliação detalhada para aperfeiçoar textura, luminosidade e tônus.</p>
+            <a href="https://wa.me/5562981990396?text=Gostaria%20de%20saber%20mais%20sobre%20as%20tecnologias%20e%20laser." class="treatment-action" target="_blank" rel="noopener">
+              Saiba Mais <span>→</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- Emagrecimento -->
+        <article class="treatment-card">
+          <div class="treatment-thumb">
+            <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=700&q=80" 
+                 alt="Acompanhamento e Emagrecimento" 
+                 loading="lazy">
+          </div>
+          <div class="treatment-body">
+            <span class="treatment-tag">Saúde Integrativa</span>
+            <h3>Emagrecimento</h3>
+            <p>Possibilidades de acompanhamento e tratamentos estruturados dentro da área de atuação clínica.</p>
+            <a href="https://wa.me/5562981990396?text=Gostaria%20de%20saber%20mais%20sobre%20emagrecimento." class="treatment-action" target="_blank" rel="noopener">
+              Saiba Mais <span>→</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- Odontologia Estética -->
+        <article class="treatment-card">
+          <div class="treatment-thumb">
+            <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=700&q=80" 
+                 alt="Odontologia Estética" 
+                 loading="lazy">
+          </div>
+          <div class="treatment-body">
+            <span class="treatment-tag">Harmonia do Sorriso</span>
+            <h3>Odontologia Estética</h3>
+            <p>Procedimentos integrados voltados à estética do sorriso em consonância com as proporções da face.</p>
+            <a href="https://wa.me/5562981990396?text=Gostaria%20de%20saber%20mais%20sobre%20odontologia%20est%C3%A9tica." class="treatment-action" target="_blank" rel="noopener">
+              Saiba Mais <span>→</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- Consulta Avaliativa -->
+        <article class="treatment-card" style="border-color: var(--accent-gold); background-color: var(--bg-champagne);">
+          <div class="treatment-thumb">
+            <img src="Logo_2.png" 
+                 alt="Consulta Avaliativa Apolis Clinic" 
+                 loading="lazy">
+          </div>
+          <div class="treatment-body">
+            <span class="treatment-tag">Ponto de Partida</span>
+            <h3>Consulta Avaliativa</h3>
+            <p>O primeiro passo seguro para mapear suas características e traçar seu plano individual de cuidados.</p>
+            <a href="#avaliacao" class="treatment-action">
+              Iniciar Avaliação <span>→</span>
+            </a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       4. CONSULTA AVALIATIVA
+       ========================================================================== -->
+  <section class="evaluation-section" id="avaliacao">
+    <div class="container">
+      <div class="evaluation-box">
+        <div class="evaluation-content">
+          <span class="eyebrow eyebrow-no-after">Consulta Individualizada</span>
+          <h2>Antes do procedimento, entendemos você.</h2>
+          <p>
+            Cada rosto, cada corpo e cada momento de vida são singulares. Por isso, não iniciamos intervenções sem antes ouvir suas prioridades e analisar minuciosamente suas proporções e necessidades.
+          </p>
+          <ul class="evaluation-features">
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              Escuta atenta dos seus incômodos e expectativas
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              Mapeamento de proporções faciais e corporais
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              Planejamento transparente de etapas e possibilidades
+            </li>
+          </ul>
+          <div>
+            <a href="https://wa.me/5562981990396?text=Ol%C3%A1%2C%20quero%20agendar%20minha%20consulta%20avaliativa%20na%20Apolis%20Clinic." 
+               class="btn btn-primary" target="_blank" rel="noopener">
+              Agendar Minha Avaliação
+            </a>
+          </div>
+        </div>
+        <div class="evaluation-image">
+          <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=900&q=80" 
+               alt="Atendimento médico e consulta avaliativa cuidadosa na Apolis Clinic" 
+               loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       5. RESULTADOS REAIS (COM CARROSSEL NO MOBILE)
+       ========================================================================== -->
+  <section class="results-section" id="resultados">
+    <div class="container">
+      <div class="section-header center">
+        <span class="eyebrow">Transparência & Verdade</span>
+        <h2>Resultados reais. Histórias reais.</h2>
+        <p class="lead">Transformações que valorizam traços naturais sem artificialismos. (Arraste para o lado no celular)</p>
+      </div>
+
+      <div class="results-grid mobile-carousel">
+        <div class="result-card">
+          <div class="result-media">
+            <img src="aba resultado rejuvenescimento_2.png" 
+                 alt="Resultado Facial Sutil" 
+                 loading="lazy">
+          </div>
+          <div class="result-info">
+            <span class="result-badge">Facial</span>
+            <h4>Suavização & Rejuvenescimento</h4>
+            <p>Tratamento personalizado focado na recuperação de volume e tônus facial.</p>
+          </div>
+        </div>
+
+        <div class="result-card">
+          <div class="result-media">
+            <img src="Aba resultdado hamonização_2.png" 
+                 alt="Equilíbrio e Linhas Harmoniosas" 
+                 loading="lazy">
+          </div>
+          <div class="result-info">
+            <span class="result-badge">Harmonização</span>
+            <h4>Equilíbrio de Perfil</h4>
+            <p>Aprimoramento delicado respeitando a arquitetura natural do paciente.</p>
+          </div>
+        </div>
+
+        <div class="result-card">
+          <div class="result-media">
+            <img src="Aba resultado textura e luminosidade_2.png" 
+                 alt="Tratamento e Textura de Pele" 
+                 loading="lazy">
+          </div>
+          <div class="result-info">
+            <span class="result-badge">Tecnologia & Laser</span>
+            <h4>Textura e Luminosidade</h4>
+            <p>Protocolo combinado para viço, estímulo dérmico e renovação tecidual.</p>
+          </div>
+        </div>
+      </div>
+
+      <p class="results-disclaimer">
+        * Resultados podem variar de acordo com características individuais, indicação clínica e resposta biológica ao tratamento. Fotos autorizadas e apresentadas exclusivamente para fins demonstrativos.
+      </p>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       6. DRA. POLYANNA POLONIATO
+       ========================================================================== -->
+  <section class="authority-section" id="dra-polyanna">
+    <div class="container">
+      <div class="authority-grid">
+        <div class="authority-image-container">
+          <div class="authority-image">
+            <img src="Imagem da Dra. Polyanna_2.jpg.jpg" 
+                 alt="Dra. Polyanna Poloniato - Farmacêutica Esteta e CEO da Apolis Clinic" 
+                 loading="lazy">
+          </div>
+        </div>
+
+        <div class="authority-content">
+          <span class="eyebrow eyebrow-no-after">Liderança & Visão Clínica</span>
+          <h2>Por trás da Apolis, existe uma história.</h2>
+          <div class="doctor-title">Dra. Polyanna Poloniato</div>
+          <div class="doctor-credentials">Farmacêutica Esteta • Fonoaudióloga • CEO Apolis Clinic</div>
+          
+          <p>
+            Com sólida especialização e um olhar atento à saúde integral, a Dra. Polyanna lidera a Apolis unindo rigor científico e sensibilidade estética. 
+          </p>
+          <p>
+            Sua trajetória iniciada em 2014 construiu uma filosofia clara: <strong>estética avançada não é sobre transformar ou padronizar, mas sobre realçar a identidade e resgatar a autoestima com serenidade e segurança.</strong>
+          </p>
+
+          <div class="signature-wrap">
+            <div class="signature-line"></div>
+            <div class="signature-text">Dra. Polyanna Poloniato</div>
+          </div>
+
+          <div style="margin-top: 2rem;">
+            <a href="https://wa.me/5562981990396?text=Gostaria%20de%20agendar%20uma%20conversa%20com%20a%20equipe%20da%20Dra.%20Polyanna." 
+               class="btn btn-secondary" target="_blank" rel="noopener">
+              Conhecer a Trajetória
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       7. HISTÓRIA DA MARCA (TIMELINE)
+       ========================================================================== -->
+  <section class="timeline-section">
+    <div class="container">
+      <div class="section-header center">
+        <span class="eyebrow">Construção & Propósito</span>
+        <h2>Nossa história, nossa evolução.</h2>
+        <p class="lead">Uma década de dedicação constante à saúde estética em Goiânia.</p>
+      </div>
+
+      <div class="timeline-wrapper">
+        <!-- 2014 -->
+        <div class="timeline-item left">
+          <div class="timeline-dot"></div>
+          <div class="timeline-year">2014</div>
+          <div class="timeline-tag">O Início</div>
+          <h4>Polyanna Poloniato Estética</h4>
+          <p>O nascimento de um propósito claro: cuidar, valorizar e acolher cada paciente com rigor e dedicação humana.</p>
+        </div>
+
+        <!-- 2020 -->
+        <div class="timeline-item right">
+          <div class="timeline-dot"></div>
+          <div class="timeline-year">2020</div>
+          <div class="timeline-tag">A Evolução</div>
+          <h4>Apolis Estética Avançada</h4>
+          <p>Expansão de infraestrutura, incorporação de novas tecnologias e consolidação de protocolos individualizados.</p>
+        </div>
+
+        <!-- 2026 -->
+        <div class="timeline-item left">
+          <div class="timeline-dot"></div>
+          <div class="timeline-year">2026</div>
+          <div class="timeline-tag">Um Novo Momento</div>
+          <h4>Apolis Clinic</h4>
+          <p>Amadurecimento pleno da marca: espaço contemporâneo e mais possibilidades de cuidado, mantendo intacta nossa essência.</p>
+        </div>
+      </div>
+
+      <div class="timeline-conclusion">
+        Três fases. Uma essência.
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       8. TECNOLOGIA A FAVOR DO SEU CUIDADO
+       ========================================================================== -->
+  <section class="technology-section">
+    <div class="container">
+      <div class="tech-grid">
+        <div class="tech-content">
+          <span class="eyebrow eyebrow-no-after">Inovação Aplicada</span>
+          <h2>Tecnologia a favor do seu cuidado.</h2>
+          <p>
+            A tecnologia faz parte da evolução dos procedimentos estéticos modernos. Na Apolis, recursos de última geração e equipamentos certificados são empregados sob estrita avaliação prévia, assegurando precisão, conforto e previsibilidade.
+          </p>
+          <div class="tech-pillars">
+            <div class="tech-pillar">
+              <h4>Precisão Diagnóstica</h4>
+              <p>Mapeamento correto das camadas dérmicas e musculares antes de qualquer intervenção.</p>
+            </div>
+            <div class="tech-pillar">
+              <h4>Segurança & Conforto</h4>
+              <p>Protocolos desenvolvidos para reduzir o tempo de recuperação e maximizar o bem-estar.</p>
+            </div>
+          </div>
+        </div>
+        <div class="tech-image">
+          <img src="Imagem parte Inovação Aplicada_3.jpg" 
+               alt="Ambiente estéril e tecnologia médica na Apolis Clinic" 
+               loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       9. EXPERIÊNCIA DO PACIENTE
+       ========================================================================== -->
+  <section class="journey-section">
+    <div class="container">
+      <div class="section-header center">
+        <span class="eyebrow">Passo a Passo</span>
+        <h2>Do primeiro contato ao acompanhamento.</h2>
+        <p class="lead">Cada etapa da sua experiência é desenhada com transparência e tranquilidade.</p>
+      </div>
+
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-num">01</div>
+          <h4>Converse com a Equipe</h4>
+          <p>Entre em contato pelo WhatsApp e compartilhe o que você busca e o que te incomoda.</p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-num">02</div>
+          <h4>Faça sua Avaliação</h4>
+          <p>Conheça suas reais possibilidades de tratamento em uma consulta detalhada e individual.</p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-num">03</div>
+          <h4>Planeje seu Cuidado</h4>
+          <p>Defina, em conjunto com o profissional responsável, o plano ideal respeitando seu tempo.</p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-num">04</div>
+          <h4>Acompanhe sua Evolução</h4>
+          <p>Tenha acompanhamento contínuo e suporte dedicado ao longo de todo o processo.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       10. MENTORIA VIP
+       ========================================================================== -->
+  <section class="mentorship-section">
+    <div class="container">
+      <div class="mentorship-content">
+        <span class="eyebrow">Para Profissionais de Saúde e Estética</span>
+        <h2>Mentoria VIP Dra. Polyanna Poloniato</h2>
+        <p>
+          Conhecimento prático, refinamento de técnica clínica e gestão de carreira para profissionais que desejam aprofundar sua atuação na estética avançada e elevar o padrão de atendimento aos seus pacientes.
+        </p>
+        <a href="https://wa.me/5562981990396?text=Ol%C3%A1%2C%20sou%20profissional%20e%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20a%20Mentoria%20VIP." 
+           class="btn btn-secondary" style="border-color: var(--accent-gold-light); color: #FAF7F0;" target="_blank" rel="noopener">
+          Conhecer a Mentoria
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       11. DEPOIMENTOS
+       ========================================================================== -->
+  <section class="testimonials-section">
+    <div class="container">
+      <div class="section-header center">
+        <span class="eyebrow">Experiências</span>
+        <h2>A experiência de quem passou por aqui.</h2>
+        <p class="lead">Relações de confiança construídas com escuta e respeito.</p>
+      </div>
+
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <p class="testimonial-quote">
+            "O que mais me impressionou foi a sinceridade na avaliação. Não me prometeram milagres, mas o resultado superou todas as minhas expectativas em naturalidade."
+          </p>
+          <div class="testimonial-author">
+            <div class="author-initial">M.S.</div>
+            <div class="author-meta">
+              <strong>Mariana S.</strong>
+              <span>Goiânia • Procedimento Facial</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <p class="testimonial-quote">
+            "Tinha receio de realizar qualquer procedimento e ficar com o rosto modificado. Na Apolis, senti uma segurança ímpar desde a consulta avaliativa."
+          </p>
+          <div class="testimonial-author">
+            <div class="author-initial">C.F.</div>
+            <div class="author-meta">
+              <strong>Camila F.</strong>
+              <span>Goiânia • Rejuvenescimento</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <p class="testimonial-quote">
+            "Ambiente impecável, equipe acolhedora e um olhar clínico de altíssimo nível. A Apolis Clinic é uma referência que sempre indico de olhos fechados."
+          </p>
+          <div class="testimonial-author">
+            <div class="author-initial">R.A.</div>
+            <div class="author-meta">
+              <strong>Renata A.</strong>
+              <span>Jardim Goiás • Cuidados Integrados</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       12. LOCALIZAÇÃO (JARDIM GOIÁS)
+       ========================================================================== -->
+  <section class="location-section" id="localizacao">
+    <div class="container">
+      <div class="location-box">
+        <div class="location-info">
+          <span class="eyebrow eyebrow-no-after">Localização Privilegiada</span>
+          <h2>Estamos em Goiânia.</h2>
+          <div class="address-details">
+            <p><strong>Apolis Clinic</strong></p>
+            <p>Rua 61, nº 195</p>
+            <p>Jardim Goiás — Goiânia / GO</p>
+            <p>CEP 74810-280</p>
+          </div>
+          <div>
+            <a href="https://maps.google.com/?q=Rua+61,+195,+Jardim+Goias,+Goiania+-+GO" 
+               target="_blank" 
+               rel="noopener" 
+               class="btn btn-primary">
+              Como Chegar
+            </a>
+          </div>
+        </div>
+        <div class="location-map-wrap">
+          <iframe 
+            title="Localização Apolis Clinic no Jardim Goiás"
+            src="https://maps.google.com/maps?q=Rua%2061,%20195,%20Jardim%20Goi%C3%A1s,%20Goi%C3%A2nia&t=&z=16&ie=UTF8&iwloc=&output=embed"
+            loading="lazy" 
+            allowfullscreen>
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       13. FAQ
+       ========================================================================== -->
+  <section class="faq-section">
+    <div class="container">
+      <div class="section-header center">
+        <span class="eyebrow">Dúvidas Frequentes</span>
+        <h2>Perguntas & Respostas</h2>
+        <p class="lead">Esclarecimentos claros para que você se sinta seguro antes de qualquer decisão.</p>
+      </div>
+
+      <div class="faq-wrapper">
+        <!-- Item 1 -->
+        <div class="accordion-item">
+          <button class="accordion-header" aria-expanded="false">
+            <span>Como saber qual procedimento é indicado para mim?</span>
+            <svg class="accordion-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="accordion-body">
+            <div class="accordion-content">
+              O primeiro passo é uma avaliação individualizada, na qual suas necessidades, objetivos e anatomia são analisados em conjunto para definir as opções clínicas pertinentes ao seu caso.
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="accordion-item">
+          <button class="accordion-header" aria-expanded="false">
+            <span>Preciso saber exatamente qual procedimento quero antes de agendar?</span>
+            <svg class="accordion-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="accordion-body">
+            <div class="accordion-content">
+              Não. Você pode apenas entrar em contato e relatar o que deseja melhorar ou o que vem te incomodando. Nossa equipe orientará com tranquilidade sobre a melhor forma de iniciar.
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="accordion-item">
+          <button class="accordion-header" aria-expanded="false">
+            <span>A Apolis trabalha com estética facial e corporal?</span>
+            <svg class="accordion-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="accordion-body">
+            <div class="accordion-content">
+              Sim. A clínica apresenta sólida atuação em protocolos integrados para face e corpo, combinando técnicas manuais e equipamentos de ponta.
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 4 -->
+        <div class="accordion-item">
+          <button class="accordion-header" aria-expanded="false">
+            <span>A clínica trabalha com laser?</span>
+            <svg class="accordion-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="accordion-body">
+            <div class="accordion-content">
+              Sim. A Apolis dispõe de protocolos com laser e tecnologias modernas. A indicação do método e intensidade é sempre definida mediante diagnóstico profissional.
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 5 -->
+        <div class="accordion-item">
+          <button class="accordion-header" aria-expanded="false">
+            <span>Vocês trabalham com emagrecimento?</span>
+            <svg class="accordion-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="accordion-body">
+            <div class="accordion-content">
+              Sim. A clínica oferece atuação voltada ao emagrecimento e bem-estar corporal. Entre em contato para conhecer as etapas e modalidades disponíveis.
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 6 -->
+        <div class="accordion-item">
+          <button class="accordion-header" aria-expanded="false">
+            <span>Vocês trabalham com odontologia estética?</span>
+            <svg class="accordion-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="accordion-body">
+            <div class="accordion-content">
+              Sim. A odontologia estética integra o portfólio de cuidados da Apolis Clinic, alinhando a beleza do sorriso à proporção global do rosto.
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 7 -->
+        <div class="accordion-item">
+          <button class="accordion-header" aria-expanded="false">
+            <span>Posso ver resultados de pacientes?</span>
+            <svg class="accordion-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="accordion-body">
+            <div class="accordion-content">
+              Sim. Durante sua consulta, a equipe poderá apresentar casos documentados reais e autorizados que se assemelhem às suas demandas.
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 8 -->
+        <div class="accordion-item">
+          <button class="accordion-header" aria-expanded="false">
+            <span>Quanto custa um procedimento?</span>
+            <svg class="accordion-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="accordion-body">
+            <div class="accordion-content">
+              Os valores variam rigorosamente conforme o plano terapêutico definido e as particularidades de cada paciente. Entre em contato para entender como funciona o investimento na avaliação.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       14. CTA FINAL
+       ========================================================================== -->
+  <section class="final-cta-section">
+    <div class="container">
+      <div class="final-cta-inner">
+        <span class="eyebrow">Dê o Primeiro Passo</span>
+        <h2>Seu próximo passo começa com uma conversa.</h2>
+        <p class="lead">
+          Conte para a nossa equipe o que você busca e conheça as possibilidades de cuidado da Apolis Clinic em Goiânia.
+        </p>
+        <div class="cta-button-group">
+          <a href="#avaliacao" class="btn btn-primary">Agendar Avaliação</a>
+          <a href="https://wa.me/5562981990396?text=Ol%C3%A1%2C%20gostaria%20de%20falar%20com%20a%20equipe%20Apolis%20Clinic." 
+             class="btn btn-secondary" target="_blank" rel="noopener">
+            Falar com a Equipe
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       15. FOOTER
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="Logo_2.png" alt="Apolis Clinic Logo">
+          <p>
+            Estética facial e corporal avançada fundamentada em precisão científica, tecnologia e naturalidade. Cuidado individualizado que respeita sua essência.
+          </p>
+        </div>
+
+        <div class="footer-nav">
+          <h5>Navegação</h5>
+          <ul class="footer-links">
+            <li><a href="#inicio">Início</a></li>
+            <li><a href="#sobre">Sobre a Clínica</a></li>
+            <li><a href="#tratamentos">Tratamentos</a></li>
+            <li><a href="#resultados">Resultados</a></li>
+            <li><a href="#dra-polyanna">Dra. Polyanna</a></li>
+            <li><a href="#localizacao">Localização</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-contact">
+          <h5>Atendimento & Endereço</h5>
+          <p>
+            Rua 61, nº 195 — Jardim Goiás<br>
+            Goiânia — GO | CEP 74810-280
+          </p>
+          <p>
+            Instagram: <a href="https://instagram.com/apolisestetica" target="_blank" rel="noopener" style="color: var(--accent-gold-light);">@apolisestetica</a><br>
+            Dra. Polyanna: <a href="https://instagram.com/apolisestetica" target="_blank" rel="noopener" style="color: var(--accent-gold-light);">@apolisestetica</a>
+          </p>
+          <div style="margin-top: 1.5rem;">
+            <a href="#avaliacao" class="btn btn-primary" style="padding: 0.75rem 1.4rem; font-size: 0.72rem;">Agendar Avaliação</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 Apolis Clinic — Todos os direitos reservados.</div>
+        <div>Desenvolvido com sofisticação e responsabilidade clínica.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       JAVASCRIPT NATIVO
+       ========================================================================== -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // 1. Header Sticky com Sombra ao Rolar
+      const header = document.getElementById('header');
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 40) {
+          header.classList.add('scrolled');
+        } else {
+          header.classList.remove('scrolled');
+        }
+      }, { passive: true });
+
+      // 2. Menu Mobile Hamburger
+      const menuToggle = document.getElementById('menuToggle');
+      const navMenu = document.getElementById('navMenu');
+      const navLinks = document.querySelectorAll('.nav-link');
+
+      menuToggle.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+        const isExpanded = navMenu.classList.contains('active');
+        menuToggle.setAttribute('aria-expanded', isExpanded);
+      });
+
+      navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          navMenu.classList.remove('active');
+          menuToggle.setAttribute('aria-expanded', false);
+        });
+      });
+
+      // 3. Accordion Acessível do FAQ
+      const accordionHeaders = document.querySelectorAll('.accordion-header');
+
+      accordionHeaders.forEach(button => {
+        button.addEventListener('click', () => {
+          const item = button.parentElement;
+          const body = item.querySelector('.accordion-body');
+          const isOpened = item.classList.contains('active');
+
+          document.querySelectorAll('.accordion-item').forEach(otherItem => {
+            otherItem.classList.remove('active');
+            otherItem.querySelector('.accordion-body').style.maxHeight = null;
+            otherItem.querySelector('.accordion-header').setAttribute('aria-expanded', 'false');
+          });
+
+          if (!isOpened) {
+            item.classList.add('active');
+            body.style.maxHeight = body.scrollHeight + 'px';
+            button.setAttribute('aria-expanded', 'true');
+          }
+        });
+      });
+
+      // 4. Smooth Scroll Nativo para Links Internos
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          const targetId = this.getAttribute('href');
+          if (targetId === '#') return;
+          
+          const targetEl = document.querySelector(targetId);
+          if (targetEl) {
+            e.preventDefault();
+            const headerHeight = header.offsetHeight;
+            const elementPosition = targetEl.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.pageYOffset - headerHeight;
+
+            window.scrollTo({
+              top: offsetPosition,
+              behavior: 'smooth'
+            });
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
